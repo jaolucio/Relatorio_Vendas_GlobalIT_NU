@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Sales List.pdf - Pessoal — Microsoft​ Ed",
+  "Type": "Screen",
+  "Id": "OkVHmOK31ECR4EOugcmYCA",
+  "Reference": "JwpNaHrvV02m4aZfXTCfsQ/OkVHmOK31ECR4EOugcmYCA",
+  "ParentRef": "JwpNaHrvV02m4aZfXTCfsQ/O4vSVin2Nki08yvwT9APcQ",
+  "Created": "2025-09-12T14:26:39.6439702Z",
+  "Updated": "2025-09-12T14:26:39.6439702Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

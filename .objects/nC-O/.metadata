@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Sales List.pdf",
+  "Type": "App",
+  "Id": "nC-OqGQiS0yiumGYGKqmhA",
+  "Reference": "JwpNaHrvV02m4aZfXTCfsQ/nC-OqGQiS0yiumGYGKqmhA",
+  "Created": "2025-09-12T14:27:16.2835613Z",
+  "Updated": "2025-09-12T14:27:16.2835613Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
