@@ -9,7 +9,8 @@
     "UiPath.OmniPage.Activities": "[1.21.0]",
     "UiPath.System.Activities": "[25.6.1]",
     "UiPath.Testing.Activities": "[25.4.0]",
-    "UiPath.UIAutomation.Activities": "[25.10.11-preview]"
+    "UiPath.UIAutomation.Activities": "[25.10.11-preview]",
+    "UiPath.WebAPI.Activities": "[1.21.1]"
   },
   "webServices": [],
   "entitiesStores": [],

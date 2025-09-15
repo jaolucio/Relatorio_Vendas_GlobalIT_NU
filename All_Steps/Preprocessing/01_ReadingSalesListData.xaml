@@ -129,7 +129,7 @@
       <AssemblyReference>UiPath.SmartData.PositionBasedExtraction</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Reading_Sales_List_Data" sap:VirtualizedContainerService.HintSize="1473.2,2348" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Reading_Sales_List_Data" sap:VirtualizedContainerService.HintSize="1200.4,2348" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
