@@ -2,6 +2,7 @@
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="out_dtSalesList" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_dtVendorList" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -93,13 +94,17 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Preprocessing" sap:VirtualizedContainerService.HintSize="1464.8000000000002,634.0566666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Preprocessing" sap:VirtualizedContainerService.HintSize="1200.4,974.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Preprocessing" sap:VirtualizedContainerService.HintSize="449.6,600.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Preprocessing" sap:VirtualizedContainerService.HintSize="449.6,951.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Name="dtVendorAddress" />
+        <Variable x:TypeArguments="sd:DataTable" Name="dtCurrencyValue" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -112,12 +117,24 @@
           <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtSalesList">[out_dtSalesList]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="02_PreparingSalesListTable - Invoke Workflow File (All_Steps\Preprocessing\02_PreparingSalesListTable.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="All_Steps\Preprocessing\02_PreparingSalesListTable.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="02_ObtainingNecessaryInformation - Invoke Workflow File (All_Steps\Preprocessing\02_ObtainingNecessaryInformation.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="All_Steps\Preprocessing\02_ObtainingNecessaryInformation.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
           <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSalesList">[out_dtSalesList]</InArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtVendorAddress">[dtVendorAddress]</OutArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtCurrencyValue">[dtCurrencyValue]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="03_PreparingSalesListTable - Invoke Workflow File (All_Steps\Preprocessing\03_PreparingSalesListTable.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="All_Steps\Preprocessing\03_PreparingSalesListTable.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dtSalesList">[out_dtSalesList]</InOutArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtVendorAddress">[dtVendorAddress]</InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtCurrencyValue">[dtCurrencyValue]</InArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtVendorList">[out_dtVendorList]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Pre-Processing completed&quot;]" />
     </Sequence>
   </Sequence>
 </Activity>
